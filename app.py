@@ -6,6 +6,14 @@ tareas = [
     {"id": 1, "titulo": "Leer sobre APIs", "completada": False},
     {"id": 2, "titulo": "Probar Postman", "completada": True}
 ]
+@app.get("/")
+def respuesta_base():
+    return jsonify("ok"), 200
+
+
+@app.get("/hearth")
+def hearth_check():
+    return jsonify("ok"), 200
 
 @app.get("/tareas")
 def obtener_tareas():
